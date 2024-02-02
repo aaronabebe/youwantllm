@@ -1,4 +1,4 @@
-from .common import *
+from ..common import *
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
@@ -11,3 +11,4 @@ ALLOWED_HOSTS = [
     "www.youwantllm.com",
     "youwantllm.server.aaronerika.lol"
 ]
+

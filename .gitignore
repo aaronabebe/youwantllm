@@ -151,3 +151,4 @@ plugindocs/
 poetry.lock
 
 static/CACHE
+staticfiles

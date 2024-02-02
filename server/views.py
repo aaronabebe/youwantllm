@@ -1,6 +1,6 @@
 import csv
-import time
 
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from .forms import EmailSignupForm
@@ -19,6 +19,22 @@ def load_data(path):
     return header, data
 
 
+def download_csv(request):
+    # Create the HttpResponse object with the appropriate CSV header.
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="llm_pricing.csv"'
+
+    writer = csv.writer(response)
+    # Assuming 'header' is a list of your column names and 'data' is your table data
+    header, data = load_data("data.csv")
+
+    writer.writerow(header)
+    for row in data:
+        writer.writerow([v for k, v in row.items()])  # Adjust this line based on your model
+
+    return response
+
+
 def email_signup(request):
     if request.method == 'POST':
         form = EmailSignupForm(request.POST)
@@ -31,7 +47,6 @@ def email_signup(request):
 
 def index(request):
     header, data = load_data("data.csv")
-    last_update = time.asctime()
     form = EmailSignupForm()
     return render(
         request,
@@ -39,7 +54,7 @@ def index(request):
         {
             "header": header,
             "data": data,
-            "last_update": last_update,
+            "last_update": "Fri Jan 30 16:22:37 2024",
             "form": form,
         }
     )

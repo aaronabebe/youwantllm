@@ -22,4 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
     path('email-signup/', views.email_signup, name='email_signup'),
+    path('download-csv/', views.download_csv, name='download_csv'),
 ]
