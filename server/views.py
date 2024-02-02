@@ -4,6 +4,7 @@ import time
 from django.shortcuts import render, redirect
 
 from .forms import EmailSignupForm
+from .models import SignUp
 
 
 def load_data(path):
@@ -23,7 +24,8 @@ def email_signup(request):
         form = EmailSignupForm(request.POST)
         if form.is_valid():
             # Process the form data (e.g., save the email to a database or subscribe it to a mailing list)
-            print(form.data["email"])
+            email = form.cleaned_data["email"]
+            SignUp.objects.create(email=email)
             return redirect('/')  # Redirect to a new URL
 
 

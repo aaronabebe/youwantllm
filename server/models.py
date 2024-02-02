@@ -26,6 +26,15 @@ class Provider(models.Model):
         return self.name
 
 
+class SignUp(models.Model):
+    email = models.EmailField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.email
+
+
 class Price(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
