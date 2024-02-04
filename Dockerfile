@@ -12,7 +12,6 @@ RUN apt-get update \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/lib/apt/lists/*
 
-USER dolphy
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
