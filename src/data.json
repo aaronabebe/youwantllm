@@ -1,0 +1,324 @@
+{
+  "lastUpdated": "Fri Feb 16 16:22:37 2024",
+  "data": [
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-4",
+    "input_token_1k_usd": 0.03,
+    "output_token_1k_usd": 0.06,
+    "context_size": 8000
+  },
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-4-32k",
+    "input_token_1k_usd": 0.06,
+    "output_token_1k_usd": 0.12,
+    "context_size": 32000
+  },
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-4-1106-preview",
+    "input_token_1k_usd": 0.01,
+    "output_token_1k_usd": 0.03,
+    "context_size": 128000
+  },
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-4-1106-vision-preview",
+    "input_token_1k_usd": 0.01,
+    "output_token_1k_usd": 0.03,
+    "context_size": 128000
+  },
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-3.5-turbo-1106",
+    "input_token_1k_usd": 0.001,
+    "output_token_1k_usd": 0.002,
+    "context_size": 16000
+  },
+  {
+    "provider": "OpenAI",
+    "developer": "OpenAI",
+    "model": "gpt-3.5-turbo-turbo-instruct",
+    "input_token_1k_usd": 0.0015,
+    "output_token_1k_usd": 0.002,
+    "context_size": 16000
+  },
+  {
+    "provider": "Mistral",
+    "developer": "Mistral",
+    "model": "mistral-7b-instruct",
+    "input_token_1k_usd": 0.00014,
+    "output_token_1k_usd": 0.00042,
+    "context_size": 32000
+  },
+  {
+    "provider": "Mistral",
+    "developer": "Mistral",
+    "model": "mixtral-8x7b-instruct",
+    "input_token_1k_usd": 0.0006,
+    "output_token_1k_usd": 0.0018,
+    "context_size": 32000
+  },
+  {
+    "provider": "Mistral",
+    "developer": "Mistral",
+    "model": "mistral-medium",
+    "input_token_1k_usd": 0.0025,
+    "output_token_1k_usd": 0.0075,
+    "context_size": 32000
+  },
+  {
+    "provider": "AWS",
+    "developer": "AI21 Labs",
+    "model": "jurassic-2-mid",
+    "input_token_1k_usd": 0.0125,
+    "output_token_1k_usd": 0.0125,
+    "context_size": 8000
+  },
+  {
+    "provider": "AWS",
+    "developer": "AI21 Labs",
+    "model": "jurassic-2-ultra",
+    "input_token_1k_usd": 0.0188,
+    "output_token_1k_usd": 0.0188,
+    "context_size": 8000
+  },
+  {
+    "provider": "AWS",
+    "developer": "AWS",
+    "model": "titan-text-express",
+    "input_token_1k_usd": 0.0012,
+    "output_token_1k_usd": 0.0023,
+    "context_size": 8000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Anthropic",
+    "model": "claude-instant",
+    "input_token_1k_usd": 0.0008,
+    "output_token_1k_usd": 0.0024,
+    "context_size": 100000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Anthropic",
+    "model": "claude",
+    "input_token_1k_usd": 0.0008,
+    "output_token_1k_usd": 0.0024,
+    "context_size": 100000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Cohere",
+    "model": "cohere-command",
+    "input_token_1k_usd": 0.0015,
+    "output_token_1k_usd": 2,
+    "context_size": 4000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Cohere",
+    "model": "cohere-light",
+    "input_token_1k_usd": 0.0003,
+    "output_token_1k_usd": 0.0006,
+    "context_size": 4000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Meta",
+    "model": "llama-2-chat-13b",
+    "input_token_1k_usd": 0.00075,
+    "output_token_1k_usd": 1,
+    "context_size": 4000
+  },
+  {
+    "provider": "AWS",
+    "developer": "Meta",
+    "model": "llama-2-chat-70b",
+    "input_token_1k_usd": 0.00195,
+    "output_token_1k_usd": 0.00256,
+    "context_size": 4000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Mistral",
+    "model": "mistral-7b-openorca",
+    "input_token_1k_usd": 0.00015,
+    "output_token_1k_usd": 0.00015,
+    "context_size": 32000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Mistral",
+    "model": "mistral-7b-instruct",
+    "input_token_1k_usd": 0.00015,
+    "output_token_1k_usd": 0.00015,
+    "context_size": 32000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Meta",
+    "model": "llama-guard-7b",
+    "input_token_1k_usd": 0.00015,
+    "output_token_1k_usd": 0.00015,
+    "context_size": 4000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Meta",
+    "model": "llama-2-7b-chat-hf",
+    "input_token_1k_usd": 0.00015,
+    "output_token_1k_usd": 0.00015,
+    "context_size": 4000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Meta",
+    "model": "llama-2-13b-chat-hf",
+    "input_token_1k_usd": 0.00025,
+    "output_token_1k_usd": 0.00025,
+    "context_size": 4000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Mistral",
+    "model": "mixtral-8x7b-instruct",
+    "input_token_1k_usd": 0.0005,
+    "output_token_1k_usd": 0.0005,
+    "context_size": 128000
+  },
+  {
+    "provider": "Anyscale",
+    "developer": "Meta",
+    "model": "llama2-70b-chat-hf",
+    "input_token_1k_usd": 1,
+    "output_token_1k_usd": 1,
+    "context_size": 4000
+  },
+  {
+    "provider": "Azure",
+    "developer": "OpenAI",
+    "model": "gpt-3.5-turbo-4k",
+    "input_token_1k_usd": 0.0015,
+    "output_token_1k_usd": 2,
+    "context_size": 4000
+  },
+  {
+    "provider": "Azure",
+    "developer": "OpenAI",
+    "model": "gpt-3.5-turbo-16k",
+    "input_token_1k_usd": 3,
+    "output_token_1k_usd": 4,
+    "context_size": 16000
+  },
+  {
+    "provider": "Azure",
+    "developer": "OpenAI",
+    "model": "gpt-4-8k",
+    "input_token_1k_usd": 0.03,
+    "output_token_1k_usd": 0.06,
+    "context_size": 8000
+  },
+  {
+    "provider": "Azure",
+    "developer": "OpenAI",
+    "model": "gpt-4-32k",
+    "input_token_1k_usd": 0.06,
+    "output_token_1k_usd": 0.12,
+    "context_size": 32000
+  },
+  {
+    "provider": "GCP",
+    "developer": "Google",
+    "model": "gemini-pro",
+    "input_token_1k_usd": 1,
+    "output_token_1k_usd": 2,
+    "context_size": 32000
+  },
+  {
+    "provider": "GCP",
+    "developer": "Google",
+    "model": "palm2",
+    "input_token_1k_usd": 2,
+    "output_token_1k_usd": 2,
+    "context_size": 8000
+  },
+  {
+    "provider": "Perplexity",
+    "developer": "Meta",
+    "model": "llama-2-7b-chat-hf",
+    "input_token_1k_usd": 0.00007,
+    "output_token_1k_usd": 0.00028,
+    "context_size": 4000
+  },
+  {
+    "provider": "Perplexity",
+    "developer": "Meta",
+    "model": "codellama-34b",
+    "input_token_1k_usd": 0.00035,
+    "output_token_1k_usd": 0.0014,
+    "context_size": 16000
+  },
+  {
+    "provider": "Perplexity",
+    "developer": "Meta",
+    "model": "llama2-70b-chat-hf",
+    "input_token_1k_usd": 0.0007,
+    "output_token_1k_usd": 0.0028,
+    "context_size": 4000
+  },
+  {
+    "provider": "Perplexity",
+    "developer": "Mistral",
+    "model": "mixtral-8x7b-instruct",
+    "input_token_1k_usd": 0.0007,
+    "output_token_1k_usd": 0.0028,
+    "context_size": 128000
+  },
+  {
+    "provider": "together.ai",
+    "developer": "Meta",
+    "model": "llama-2-7b-chat-hf",
+    "input_token_1k_usd": 0.0002,
+    "output_token_1k_usd": 0.0002,
+    "context_size": 4000
+  },
+  {
+    "provider": "together.ai",
+    "developer": "Meta",
+    "model": "codellama-13b",
+    "input_token_1k_usd": 0.000225,
+    "output_token_1k_usd": 0.000225,
+    "context_size": 16000
+  },
+  {
+    "provider": "together.ai",
+    "developer": "Meta",
+    "model": "codellama-34b",
+    "input_token_1k_usd": 0.000776,
+    "output_token_1k_usd": 0.000776,
+    "context_size": 16000
+  },
+  {
+    "provider": "together.ai",
+    "developer": "Meta",
+    "model": "llama2-70b-chat-hf",
+    "input_token_1k_usd": 0.0009,
+    "output_token_1k_usd": 0.0009,
+    "context_size": 4000
+  },
+  {
+    "provider": "together.ai",
+    "developer": "Mistral",
+    "model": "mixtral-8x7b-instruct",
+    "input_token_1k_usd": 0.0006,
+    "output_token_1k_usd": 0.0006,
+    "context_size": 128000
+  }
+]}

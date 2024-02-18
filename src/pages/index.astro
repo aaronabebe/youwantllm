@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import apiData from "../data.json"
+
+const header = [
+  "provider",
+  "developer",
+  "model",
+  "input_token_1k_usd",
+  "output_token_1k_usd",
+  "context_size"
+]
+---
+
+  <Layout title="can i llm? freshly scraped llm api prices">
+    <div class="flex flex-col space-y-4 p-1">
+      <div>
+        <h1 class="text-xl font-bold text-gray-800 font-mono">can i llm?</h1>
+        <h3 class="text-l text-gray-600 font-mono">freshly scraped llm api prices</h3>
+      </div>
+
+      <div class="relative overflow-auto" style="max-height: 75vh;">
+        <table class="table-auto w-full border-collapse border border-gray-200 shadow-md font-mono">
+          <thead class="bg-gray-50 sticky top-0">
+            {header.map((col) =>
+              <th class="px-4 py-2 text-left text-gray-600 border-b border-gray-200">{col}</th>
+            )}
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            {apiData.data.map((row) =>
+              <tr>
+                {Object.entries(row).map(([k, v]) =>
+                  k.includes("usd") ?
+                    <td class="px-4 py-2">${v}</td> :
+                    <td class="px-4 py-2">{v}</td>
+                )}
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <!-- Download Button -->
+        <div class="flex flex-row space-between">
+        <form method="post" class="font-mono">
+          <input
+            class="p-2 border-gray-300 rounded-lg"
+            placeholder="email" type="email" name="email" required
+          />
+          <button type="submit"
+            class="p-2 bg-gray-50 text-gray-800 border border-gray-200 rounded hover:bg-gray-200 transition-colors">
+            get notified via email
+                </button>
+        </form>
+        <a onclick="downloadData()"
+          class="ml-2 p-2 bg-gray-50 text-gray-800 font-mono border border-gray-200 rounded hover:bg-gray-200 transition-colors cursor-pointer">
+          download as json
+            </a>
+      </div>
+
+      <div>
+        <h3 class="text-m text-gray-800 font-mono">last update: {apiData.lastUpdated}</h3>
+        <p class="text-gray-600 font-mono">website by <a class="underline hover:text-red-600"
+          href="https://aaronabebe.github.io">aaron abebe</a></p>
+      </div>
+
+    </div>
+  </Layout>
+  <script is: inline>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+        const email = form.querySelector('input[name="email"]');
+        const url = "srv-captain--bby";
+        const options = {
+      method: 'PUT',
+          headers: {
+      'Content-Type': 'application/json',
+            'x-api-baby': 'bby-4ever'
+          },
+          body: JSON.stringify({'email': email.value })
+        };
+
+        fetch(url, options)
+        form.reset();
+    })
+
+
+    const downloadData = () => {
+      fetch("/data.json")
+        .then(resp => resp.json())
+        .then(data => JSON.stringify(data))
+        .then(data => {
+          console.log(data)
+          const blob = new Blob([data], { type: "application/json" })
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+
+          a.href = url;
+          a.download = 'download';
+          a.click();
+        })
+    }
+  </script>
